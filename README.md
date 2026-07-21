@@ -1,8 +1,38 @@
+<div align="center">
+
 # 📱💻 Electronics Retail — Sales Performance & Fulfillment SLA Analysis
 
-End-to-end analysis of a 50,000-order electronics retail dataset (Mobile Phones & Laptops, Mar 2023 – Mar 2025), covering **revenue performance** and **order fulfillment SLA**, built with **SQL + Python (Pandas/Matplotlib/Seaborn)** and delivered as an **Excel workbook**.
+![SQL](https://img.shields.io/badge/SQL-Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![Python](https://img.shields.io/badge/Python-Pandas%20%7C%20Matplotlib%20%7C%20Seaborn-3776AB?style=flat-square&logo=python&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-Workbook-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Orders](https://img.shields.io/badge/Orders-50%2C000-informational?style=flat-square)
+![Period](https://img.shields.io/badge/Period-Mar%202023%20--%20Mar%202025-informational?style=flat-square)
 
-The headline finding: dispatch delay averages **~31 days** and stays within a narrow band across *every* brand and region — pointing to a **systemic fulfillment bottleneck**, not a vendor- or region-specific problem.
+End-to-end analysis of a 50,000-order electronics retail dataset (Mobile Phones & Laptops), covering **revenue performance** and **order fulfillment SLA**, built with **SQL + Python** and delivered as an **Excel workbook**.
+
+</div>
+
+---
+
+## 🚨 The Headline Finding
+
+> Dispatch delay averages **~31 days** and stays within a **narrow ~1-day band across every single brand and region** — pointing to a **systemic fulfillment bottleneck**, not a vendor- or region-specific problem.
+
+<div align="center">
+<img src="charts/07_delay_by_brand.png" width="720" alt="Avg Dispatch Delay by Brand">
+</div>
+
+---
+
+## ⚡ KPI Snapshot
+
+<div align="center">
+
+| 💰 Total Revenue | 📦 Total Orders | 🧾 Avg Order Value | 🚚 Avg Dispatch Delay |
+|:---:|:---:|:---:|:---:|
+| **₹2,827.9 Cr** | **50,000** | **₹5.66 Lakh** | **30.6 days** |
+
+</div>
 
 ---
 
@@ -25,66 +55,134 @@ The headline finding: dispatch delay averages **~31 days** and stays within a na
 
 ---
 
+## 💰 Revenue Performance
+
+<table>
+<tr>
+<td width="50%">
+
+**Monthly Trend**
+<img src="charts/01_monthly_revenue_trend.png" width="100%">
+
+</td>
+<td width="50%">
+
+**Top 10 Brands**
+<img src="charts/02_revenue_by_brand.png" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Revenue by Region**
+<img src="charts/03_revenue_by_region.png" width="100%">
+
+</td>
+<td width="50%">
+
+**Mobile vs Laptop Split**
+<img src="charts/04_product_split.png" width="100%">
+
+</td>
+</tr>
+</table>
+
+**Reading the numbers:**
+- Product mix is near-even: Laptops ₹1,418.7 Cr (50.3%) vs Mobile Phones ₹1,409.2 Cr (49.7%)
+- Top brand: **Google** (₹151.5 Cr, 2,598 orders) — but revenue is otherwise fairly evenly spread across brands
+- Top region: **West** (₹585.7 Cr, 10,288 orders) — all 5 regions land within a tight ₹265 Cr band
+
+---
+
+## 🚚 Fulfillment / SLA Performance
+
+<table>
+<tr>
+<td width="50%">
+
+**Delay Distribution**
+<img src="charts/05_delay_distribution.png" width="100%">
+
+</td>
+<td width="50%">
+
+**SLA Breakdown**
+<img src="charts/06_sla_breakdown.png" width="100%">
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>🔍 Click to see the systemic-vs-isolated diagnosis (delay by brand, shown above in Headline Finding)</b></summary>
+<br>
+
+- Avg delay by **brand** ranges only **30.0–31.1 days** (Sony lowest, Samsung highest)
+- Avg delay by **region** ranges only **30.4–30.9 days** (Central lowest, South highest)
+- Both spreads are under 1.2 days — nowhere near enough variation to blame a single vendor, product line, or region
+- **Conclusion:** this is a process/operations-level bottleneck (e.g. warehouse, logistics partner, or inward-to-dispatch handoff), not a brand or region issue
+
+</details>
+
+**SLA breakdown:**
+
+| Bucket | % of Orders |
+|---|---|
+| 🟢 1–7 days (Good) | 11.5% |
+| 🟡 8–14 days (Acceptable) | 11.7% |
+| 🟠 15–30 days (Delayed) | 26.6% |
+| 🔴 31–60 days (Severely Delayed) | **50.2%** |
+
+---
+
+## 🔧 Spec vs Price Check
+
+<div align="center">
+<img src="charts/08_price_by_ram.png" width="600" alt="Average Price by RAM Tier">
+</div>
+
+No meaningful price premium across RAM tiers — 4GB to 32GB all average **~₹1.02–1.03 Lakh**. Pricing in this dataset isn't spec-driven.
+
+---
+
 ## 🗂️ File-by-File Description
 
-### `Electronics_Sales_Fulfillment_Analysis.xlsx`
-The final deliverable workbook — 5 sheets:
+<details>
+<summary><b>📘 Electronics_Sales_Fulfillment_Analysis.xlsx</b> — click to expand</summary>
+<br>
 
 | Sheet | Contents |
 |---|---|
-| **Raw Data** | All 50,000 order-level records (Product, Brand, Price, Inward/Dispatch Date, Quantity Sold, Customer, Region, RAM/ROM/SSD specs, derived Revenue/Delay_Days/SLA_Bucket columns). |
-| **Overview** | Executive KPI summary — total orders, total revenue, avg order value, avg dispatch delay. |
-| **Revenue Analysis** | Revenue & order count broken down by Brand, Region, Product Type, and Month. |
-| **Fulfillment SLA** | SLA bucket breakdown (% of orders in each delay band) plus avg delay by Brand and by Region. |
-| **Spec vs Price** | Avg price by RAM tier — checks whether higher specs command a price premium. |
+| **Raw Data** | All 50,000 order-level records (Product, Brand, Price, Inward/Dispatch Date, Quantity Sold, Customer, Region, RAM/ROM/SSD specs, derived Revenue/Delay_Days/SLA_Bucket columns) |
+| **Overview** | Executive KPI summary — total orders, total revenue, avg order value, avg dispatch delay |
+| **Revenue Analysis** | Revenue & order count by Brand, Region, Product Type, and Month |
+| **Fulfillment SLA** | SLA bucket breakdown plus avg delay by Brand and by Region |
+| **Spec vs Price** | Avg price by RAM tier — checks for a spec-driven price premium |
 
-### `eda_analysis.py`
-Python script that loads the raw CSV, derives `Revenue`, `Delay_Days`, `YearMonth`, and `SLA_Bucket` columns, computes the executive KPI summary, and generates the chart set (monthly revenue trend, SLA breakdown, delay-by-brand) using Matplotlib/Seaborn with a consistent navy/orange color palette.
+</details>
 
-### `analysis_queries.sql`
-12 T-SQL queries (SQL Server, `DEPARTMENT_NEW.dbo.mobile_sales_data`) covering: overall KPIs, revenue by product/brand/region/month, dispatch delay stats, SLA bucket breakdown, delay-by-brand and delay-by-region (systemic vs isolated check), price premium by RAM tier, top-selling product codes, and severely delayed orders needing operational attention.
+<details>
+<summary><b>🐍 eda_analysis.py</b> — click to expand</summary>
+<br>
 
-### `charts/`
-8 exported PNG visuals used in the workbook/README — see the [Charts section](#-charts) below.
+Loads the raw CSV, derives `Revenue`, `Delay_Days`, `YearMonth`, and `SLA_Bucket` columns, computes the executive KPI summary, and generates the chart set using Matplotlib/Seaborn with a consistent navy/orange palette.
 
----
+</details>
 
-## 🔑 Key Findings
+<details>
+<summary><b>🗄️ analysis_queries.sql</b> — click to expand</summary>
+<br>
 
-**Business performance**
-- **Total revenue:** ₹2,827.9 Cr across 50,000 orders (Mar 2023 – Mar 2025)
-- **Avg order value:** ₹5.66 Lakh
-- **Product mix is near-even:** Laptops ₹1,418.7 Cr (50.3%) vs Mobile Phones ₹1,409.2 Cr (49.7%)
-- **Top brand by revenue:** Google (₹151.5 Cr, 2,598 orders); **top region:** West (₹585.7 Cr, 10,288 orders) — though brand and region revenue are otherwise fairly evenly spread
-- **Spec vs price:** no meaningful price premium across RAM tiers (4GB to 32GB all average ~₹1.02–1.03 Lakh) — pricing in this dataset isn't spec-driven
+12 T-SQL queries (`DEPARTMENT_NEW.dbo.mobile_sales_data`) covering: overall KPIs, revenue by product/brand/region/month, dispatch delay stats, SLA bucket breakdown, delay-by-brand and delay-by-region (systemic check), price premium by RAM tier, top-selling product codes, and severely delayed orders needing attention.
 
-**Fulfillment / SLA performance**
-- **Avg dispatch delay:** 30.6 days
-- **SLA breakdown:** only 11.5% of orders dispatch within a week (Good), 11.7% in 8–14 days (Acceptable), 26.6% in 15–30 days (Delayed), and **50.2% take 31–60 days (Severely Delayed)**
-- **Systemic, not isolated:** avg delay by brand ranges only 30.0–31.1 days, and by region only 30.4–30.9 days — every brand and region is delayed by roughly the same amount, ruling out a single vendor or region as the root cause
-
----
-
-## 📊 Charts
-
-| Chart | Description |
-|---|---|
-| `01_monthly_revenue_trend.png` | Revenue trend month-over-month, Mar 2023 – Mar 2025 |
-| `02_revenue_by_brand.png` | Top 10 brands by total revenue |
-| `03_revenue_by_region.png` | Revenue split across the 5 regions |
-| `04_product_split.png` | Revenue share: Mobile Phone vs Laptop |
-| `05_delay_distribution.png` | Distribution of dispatch delay (days), with mean marked |
-| `06_sla_breakdown.png` | % of orders in each SLA bucket |
-| `07_delay_by_brand.png` | Avg dispatch delay per brand vs overall average — shows the systemic pattern |
-| `08_price_by_ram.png` | Avg price by RAM tier — spec premium check |
+</details>
 
 ---
 
 ## 🧰 Tech Stack
 
-- **SQL Server (T-SQL)** — aggregation and KPI queries
-- **Python** — Pandas (data cleaning/derivation), Matplotlib + Seaborn (visualization)
-- **Excel** — final KPI workbook for stakeholder delivery
+`SQL Server (T-SQL)` · `Python (Pandas, Matplotlib, Seaborn)` · `Excel`
 
 ## ▶️ How to Reproduce
 
@@ -94,6 +192,10 @@ Python script that loads the raw CSV, derives `Revenue`, `Delay_Days`, `YearMont
 
 ---
 
+<div align="center">
+
 ### 👤 Author
-**Harsh Pandey** — Data Analyst / BI portfolio project
+**Harsh Pandey** — Data Analyst / BI Portfolio Project
 [GitHub: HARSHPANDEY9756](https://github.com/HARSHPANDEY9756)
+
+</div>
