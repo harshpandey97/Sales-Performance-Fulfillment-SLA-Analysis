@@ -41,7 +41,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/07_delay_by_brand.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/07_delay_by_brand.png" width="850">
 
 </div>
 
@@ -64,7 +64,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/01_monthly_revenue_trend.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/01_monthly_revenue_trend.png" width="850">
 
 </div>
 
@@ -74,7 +74,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/02_revenue_by_brand.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/02_revenue_by_brand.png" width="850">
 
 </div>
 
@@ -84,7 +84,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/03_revenue_by_region.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/03_revenue_by_region.png" width="850">
 
 </div>
 
@@ -94,7 +94,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/04_product_split.png" width="700">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/04_product_split.png" width="700">
 
 </div>
 
@@ -106,7 +106,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/05_delay_distribution.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/05_delay_distribution.png" width="850">
 
 </div>
 
@@ -116,7 +116,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/06_sla_breakdown.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/06_sla_breakdown.png" width="850">
 
 </div>
 
@@ -137,7 +137,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="charts/08_price_by_ram.png" width="750">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/08_price_by_ram.png" width="750">
 
 </div>
 
@@ -180,6 +180,8 @@ Sales-Performance-Fulfillment-SLA-Analysis/
     └── mobile_sales_data.csv
 ```
 
+> ⚠️ **Note:** as of now, only `README.md` and `LICENSE` exist in this repo. Upload the files above into their matching folders for everything (images, code, dataset) to actually work.
+
 ---
 
 # 🛠 Technology Stack
@@ -220,7 +222,7 @@ The SQL script contains queries for:
 Execute
 
 ```sql
-analysis_queries.sql
+sql/analysis_queries.sql
 ```
 
 inside SQL Server.
@@ -236,7 +238,7 @@ pip install pandas matplotlib seaborn
 Run
 
 ```bash
-python eda_analysis.py
+python python/eda_analysis.py
 ```
 
 ---
@@ -246,7 +248,7 @@ python eda_analysis.py
 Open
 
 ```
-Electronics_Sales_Fulfillment_Analysis.xlsx
+excel/Electronics_Sales_Fulfillment_Analysis.xlsx
 ```
 
 ---
@@ -268,7 +270,7 @@ Electronics_Sales_Fulfillment_Analysis.xlsx
 
 **Data Analyst | SQL | Python | Excel | Power BI**
 
-🔗 GitHub: https://github.com/HARSHPANDEY9756
+🔗 GitHub: https://github.com/harshpandey97
 
 ---
 
