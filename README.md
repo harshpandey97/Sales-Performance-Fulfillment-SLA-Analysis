@@ -41,7 +41,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/07_delay_by_brand.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/07_delay_by_brand.png" width="850">
 
 </div>
 
@@ -64,7 +64,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/01_monthly_revenue_trend.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/01_monthly_revenue_trend.png" width="850">
 
 </div>
 
@@ -74,7 +74,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/02_revenue_by_brand.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/02_revenue_by_brand.png" width="850">
 
 </div>
 
@@ -84,7 +84,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/03_revenue_by_region.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/03_revenue_by_region.png" width="850">
 
 </div>
 
@@ -94,7 +94,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/04_product_split.png" width="700">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/04_product_split.png" width="700">
 
 </div>
 
@@ -106,7 +106,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/05_delay_distribution.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/05_delay_distribution.png" width="850">
 
 </div>
 
@@ -116,7 +116,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/06_sla_breakdown.png" width="850">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/06_sla_breakdown.png" width="850">
 
 </div>
 
@@ -137,7 +137,7 @@ This indicates a **system-wide operational bottleneck** rather than an issue wit
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/charts/08_price_by_ram.png" width="750">
+<img src="https://raw.githubusercontent.com/harshpandey97/Sales-Performance-Fulfillment-SLA-Analysis/main/08_price_by_ram.png" width="750">
 
 </div>
 
@@ -222,7 +222,7 @@ The SQL script contains queries for:
 Execute
 
 ```sql
-sql/analysis_queries.sql
+analysis_queries.sql
 ```
 
 inside SQL Server.
@@ -238,7 +238,7 @@ pip install pandas matplotlib seaborn
 Run
 
 ```bash
-python python/eda_analysis.py
+python eda_analysis.py
 ```
 
 ---
@@ -248,7 +248,7 @@ python python/eda_analysis.py
 Open
 
 ```
-excel/Electronics_Sales_Fulfillment_Analysis.xlsx
+Electronics_Sales_Fulfillment_Analysis.xlsx
 ```
 
 ---
